@@ -11,8 +11,8 @@ public class Lista {
     private Map<String, Set<String>> diccionario = new HashMap<>();
 
     public void anadirPalabra(String palabra) {
-        String inicial = palabra.substring(0, 1);
         palabra = palabra.toLowerCase().trim();
+        String inicial = palabra.substring(0, 1);
         if (diccionario.containsKey(inicial)) {
             Set<String> palabrasAlmacenadas = diccionario.get(inicial);
             palabrasAlmacenadas.add(palabra);
