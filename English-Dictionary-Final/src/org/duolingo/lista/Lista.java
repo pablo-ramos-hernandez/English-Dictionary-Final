@@ -10,37 +10,42 @@ public class Lista {
 
     private Map<String, Set<String>> diccionario = new HashMap<>();
 
+    // Metodo para añadir Palabras
     public void anadirPalabra(String palabra) {
         palabra = palabra.toLowerCase().trim();
         String inicial = palabra.substring(0, 1);
         if (diccionario.containsKey(inicial)) {
             Set<String> palabrasAlmacenadas = diccionario.get(inicial);
             palabrasAlmacenadas.add(palabra);
-            diccionario.put(inicial, palabrasAlmacenadas);
+            System.out.println("Se ha añadido correctamente");
         } else {
             Set<String> listaDePalabrasNuevas = new HashSet<>();
             listaDePalabrasNuevas.add(palabra);
+            System.out.println("Se ha añadido correctamente");
             diccionario.put(inicial, listaDePalabrasNuevas);
         }
-        System.out.println(diccionario);
     }
 
+    // Metodo para eliminar Palabras
     public void eliminarPalabra(String palabra) {
-        String inicial = palabra.substring(0, 1);
         palabra = palabra.toLowerCase().trim();
+        String inicial = palabra.substring(0, 1);
         if (diccionario.containsKey(inicial)) {
             Set<String> palabraAlmacenadas = diccionario.get(inicial);
             palabraAlmacenadas.remove(palabra);
-            diccionario.remove(inicial, palabra);
+            if (palabraAlmacenadas.size() == 0) {
+                diccionario.remove(inicial);
+            }
+            System.out.println("Se ha eliminado");
         } else {
-            System.out.println("Hola");
+            System.out.println("No existe la palabra");
         }
-        System.out.println(diccionario);
     }
 
+    // Metodo para encontrar la Palabra
     public void encontrarPalabra(String palabra) {
-        String inicial = palabra.substring(0, 1);
         palabra = palabra.toLowerCase().trim();
+        String inicial = palabra.substring(0, 1);
         if (diccionario.containsKey(inicial)) {
             Set<String> palabrasAlmacenadas = diccionario.get(inicial);
             if (palabrasAlmacenadas.contains(palabra)) {
@@ -51,14 +56,18 @@ public class Lista {
         }
     }
 
+    // Metodo para mostrar iniciales
     public void mostrarIniciales() {
+        System.out.println("Estan son las iniciales que tiene alguna palabra");
         System.out.println(diccionario.keySet());
     }
 
+    // Metodo para mostrar las palabras
     public void mostrarPalabras(String palabra) {
         if (diccionario.containsKey(palabra)) {
             Set<String> palabrasAlmacenadas = diccionario.get(palabra);
             if (palabrasAlmacenadas.size() != 0) {
+                System.out.println("Aqui tiene sus palabras: ");
                 System.out.println(palabrasAlmacenadas);
             } else {
                 System.out.println("No existe ninguna palabra registrada con esta inicial");
