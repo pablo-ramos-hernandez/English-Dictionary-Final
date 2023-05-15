@@ -50,9 +50,11 @@ public class Lista {
             Set<String> palabrasAlmacenadas = diccionario.get(inicial);
             if (palabrasAlmacenadas.contains(palabra)) {
                 System.out.println("Existe la palabra");
-            } else {
-                System.out.println("No existe");
+            } else{
+                System.out.println("No existe la palabra");
             }
+        } else{
+            System.out.println("La inicial no esta registrada");
         }
     }
 
