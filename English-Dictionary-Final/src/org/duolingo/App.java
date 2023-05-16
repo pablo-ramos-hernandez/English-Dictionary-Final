@@ -1,6 +1,5 @@
 import java.util.Scanner;
-
-import org.duolingo.lista.Lista;
+import lista.Lista;
 
 public class App {
     public static void main(String[] args) throws Exception {

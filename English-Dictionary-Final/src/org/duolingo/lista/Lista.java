@@ -1,4 +1,4 @@
-package org.duolingo.lista;
+package lista;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,18 +1,9 @@
-## Getting Started
+## Creacion de aplicacion para duolingo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+En esta práctica, la empresa Duolingo Inc. se ha puesto en contacto con nosotros para
+solicitarnos la elaboración de una aplicación para sus usuarios. El objetivo de este
+programa será que los usuarios puedan tener a su alcance un diccionario en el que
+puedan guardar y revisar las palabras de inglés que van aprendiendo cada día.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Aqui puede encontrar toda la documentacion:
+[documentacion](src/org/duolingo/documentacion/README.md)
